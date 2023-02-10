@@ -1,3 +1,0 @@
-describe('alura busca curso', () =>{
-    
-})

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-02-06T20:35:53.938Z",
+    "end": "2023-02-06T20:36:11.700Z",
+    "duration": 17762,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "45c0c22e-2efc-491f-949b-f7471af8be8e",
+      "title": "",
+      "fullFile": "cypress/integration/3-Linkedin/linkedin.spec.js",
+      "file": "cypress/integration/3-Linkedin/linkedin.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "verificar mensagens de email invalido",
+          "fullTitle": "verificar mensagens de email invalido",
+          "timedOut": null,
+          "duration": 4350,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.contains('a', 'New to LinkedIn? Join now').click();\ncy.contains('button', 'Agree & Join').click;\ncy.get('input[placeholder=\"Email or phone number\"]').type('Mariana');\ncy.contains('p class', 'Please enter a valid email address or mobile number.').should('be.visible');",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'New to LinkedIn? Join now' within the selector: 'a' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'New to LinkedIn? Join now' within the selector: 'a' but never did.\n    at Context.eval (http://localhost:62883/__cypress/tests?p=cypress\\integration\\3-Linkedin\\linkedin.spec.js:112:6)",
+            "diff": null
+          },
+          "uuid": "76ead069-4a30-442e-a915-3e365ab3f12a",
+          "parentUUID": "45c0c22e-2efc-491f-949b-f7471af8be8e",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "4684fd66-2c72-4734-8418-c5cad5c88d7e",
+          "title": "Login e registro de usuários",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verificar mensagens validacao",
+              "fullTitle": "Login e registro de usuários verificar mensagens validacao",
+              "timedOut": null,
+              "duration": 9616,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'New to LinkedIn? Join now').click();\ncy.contains('button', 'Agree & Join').click;\ncy.contains('p class', 'Please enter your email address or mobile number.').should('be.visible');\ncy.contains('button', 'Agree & Join').click;\ncy.contains('p class', 'Please enter your password.').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Please enter your email address or mobile number.' within the selector: 'p class' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Please enter your email address or mobile number.' within the selector: 'p class' but never did.\n    at Context.eval (https://www.linkedin.com/__cypress/tests?p=cypress\\integration\\3-Linkedin\\linkedin.spec.js:106:81)",
+                "diff": null
+              },
+              "uuid": "fc00ac24-a637-4cfe-b961-7b2b2bf20212",
+              "parentUUID": "4684fd66-2c72-4734-8418-c5cad5c88d7e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fc00ac24-a637-4cfe-b961-7b2b2bf20212"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9616,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [
+        "76ead069-4a30-442e-a915-3e365ab3f12a"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 4350,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
